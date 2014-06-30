@@ -1,4 +1,4 @@
-julython2014
+Gameboard Layout Tests
 ============
 
-http://www.julython.org
+Trying out some HTML layouts for our gameboards.
