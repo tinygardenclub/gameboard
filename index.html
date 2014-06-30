@@ -514,7 +514,7 @@
 </div> <!-- Container -->
 
 <div class="modal" id="podmodal" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-sm">
+	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">
@@ -523,11 +523,21 @@
 				<h4 class="modal-title" id="podmodal-title">Modal title</h4>
 			</div>
 			<div class="modal-body">
-				...
+				<div class="row">
+					<div class="col-xs-6">
+						<img id="podmodal-img" />
+					</div>
+					<div class="col-xs-6">
+						<div class="btn-group-vertical full-width">
+							<a href="#" class="btn btn-default full-width"><div class="text-left">Action</div></a>
+							<a href="#" class="btn btn-default full-width"><div class="text-left">Action</div></a>
+							<a href="#" class="btn btn-default full-width"><div class="text-left">Action</div></a>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Done</button>
 			</div>
 		</div>
 	</div>
@@ -542,6 +552,7 @@
 <script>
 $(document).on('click','.pod a',function(){
 	$('#podmodal-title').html( $(this).attr('title') );
+	$('#podmodal-img').attr( 'src', $(this).children('img')[0].src );
 });
 </script>
 </body>
